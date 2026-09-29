@@ -1,231 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5MHRE9L8VY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-5MHRE9L8VY');
-</script>
   <meta charset="UTF-8" />
-  <title>Henry Redondo | Assistant Professor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Henry Redondo | Economist, University of Alicante</title>
   <meta
     name="description"
-    content="Academic homepage of Henry Redondo, Assistant Professor at University of Alicante."
+    content="Henry Redondo is an Assistant Professor of Economics at the University of Alicante working on labor economics, dual labor markets, worker reallocation, internal migration and political economy, using administrative data from Spain and Brazil."
   />
-  <link rel="stylesheet" href="styles.css" />
-  <!-- Google Fonts: serif for headings, sans-serif for body -->
+  <meta name="author" content="Henry Redondo" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#11151c" media="(prefers-color-scheme: dark)" />
+  <link rel="canonical" href="https://henryredondo.com/" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f3a60'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' fill='white' text-anchor='middle'%3EHR%3C/text%3E%3C/svg%3E" />
+
+  <!-- Link previews (WhatsApp, Slack, LinkedIn, X) -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Henry Redondo | Economist, University of Alicante" />
+  <meta property="og:description" content="Labor economics, dual labor markets, worker reallocation and political economy." />
+  <meta property="og:url" content="https://henryredondo.com/" />
+  <meta property="og:image" content="https://henryredondo.com/assets/img/profile-360.jpg" />
+  <meta name="twitter:card" content="summary" />
+
+  <!-- Structured data: helps search engines show your name, job and affiliation -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Henry Redondo",
+    "jobTitle": "Assistant Professor of Economics",
+    "url": "https://henryredondo.com/",
+    "image": "https://henryredondo.com/assets/img/profile-360.jpg",
+    "email": "mailto:henry.redondo@ua.es",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "University of Alicante",
+      "department": { "@type": "Organization", "name": "Department of Economics" }
+    },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Universidad Carlos III de Madrid" },
+    "knowsAbout": ["Labor economics", "Dual labor markets", "Internal migration", "Political economy", "Administrative data"]
+  }
+  </script>
+
+  <!-- Fonts: one family (headings only); body text uses the system font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap"
     rel="stylesheet"
   />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preload" as="image" href="assets/img/profile-360.jpg" />
+
+  <script src="assets/script.js" defer></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5MHRE9L8VY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5MHRE9L8VY');
+  </script>
 </head>
 <body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
   <header class="site-header">
     <div class="container header-inner">
-      <div class="brand">
-        <a href="#home" class="brand-link">
-          <span class="brand-name">Henry Redondo</span>
-          <span class="brand-title">Assistant Professor</span>
-        </a>
-      </div>
-      <nav class="site-nav">
-        <button class="nav-toggle" aria-label="Toggle navigation">
-          <span class="nav-toggle-line"></span>
-          <span class="nav-toggle-line"></span>
+      <a href="#about" class="brand">Henry Redondo</a>
+      <nav class="site-nav" aria-label="Main">
+        <button class="nav-toggle" aria-label="Open menu" aria-controls="nav-list" aria-expanded="false">
+          <span></span><span></span>
         </button>
-        <ul class="nav-list">
-          <li><a href="#home" class="nav-link active">Home</a></li>
+        <ul class="nav-list" id="nav-list">
+          <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#research" class="nav-link">Research</a></li>
-          <li><a href="#cv" class="nav-link">CV</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="assets/files/CV.pdf" class="nav-cv" target="_blank" rel="noopener">CV</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main id="home">
-    <!-- Hero section -->
-    <section class="hero">
+  <main id="main">
+    <!-- About -->
+    <section class="hero" id="about">
       <div class="container hero-inner">
         <div class="hero-text">
           <h1 class="hero-name">Henry Redondo</h1>
-          <p class="hero-title">Assistant Professor of Economics</p>
-          <p class="hero-affiliation">Department of Economics, University of Alicante</p>
-          <p class="hero-tagline">
-            I am an Assistant Professor at the University of Alicante. I received my PhD from Universidad Carlos III de Madrid.
-            My research aims to better understand workers' reactions to economic shocks and the causes of labor market inequality. I am particularly interested in how institutional features and policy interventions shape these dynamics across different groups of workers.
+          <p class="hero-role">
+            Assistant Professor of Economics<br />
+            <span class="muted">University of Alicante</span>
           </p>
+          <p class="hero-tagline">
+            I'm an economist working on labor economics. My work focuses on how labor market institutions shape
+            workers' careers, especially the divide between temporary and permanent contracts
+            (<a href="assets/files/Project_Policy_evaluation.pdf">1</a>, <a href="assets/files/QRandomMatches_DualLabour_CRS.pdf">2</a>),
+            and on how workers adjust to economic shocks (<a href="assets/files/JMP.pdf">1</a>).
+          </p>
+          <p class="hero-tagline">
+            I'm an Assistant Professor at the University of Alicante. I received my PhD in Economics from Universidad Carlos III de Madrid.
+          </p>
+
+          <ul class="fields" aria-label="Research fields">
+            <li>Labor economics</li>
+            <li>Dual labor markets</li>
+            <li>Internal migration</li>
+            <li>Political economy</li>
+          </ul>
+
+          <div class="hero-actions">
+            <a href="assets/files/CV.pdf" class="button button-primary" target="_blank" rel="noopener">CV (PDF)</a>
+            <a href="mailto:henry.redondo@ua.es" class="button button-ghost">Email</a>
+            <!-- Add profiles when ready:
+            <a href="https://scholar.google.com/citations?user=XXXX" class="button button-ghost" target="_blank" rel="noopener">Google Scholar</a>
+            -->
+          </div>
         </div>
         <div class="hero-photo">
-        <div class="hero-photo"> <img src="profile.jpg" alt="Photo of Henry Redondo" class="profile-photo"> </div>
+          <img
+            src="assets/img/profile-360.jpg"
+            alt="Portrait of Henry Redondo"
+            width="360" height="360"
+            fetchpriority="high" decoding="async"
+          />
         </div>
       </div>
     </section>
 
+    <!-- Research -->
+    <section id="research" class="section">
+      <div class="container">
+        <h2 class="section-title">Research</h2>
 
-
-    <!-- Research section -->
-    <section id="research" class="section section-alt">
-      <div class="container section-inner">
-        <div class="section-header">
-          <h2 class="section-title">Research</h2>
-        </div>
+        <!-- Publications -->
+        <h3 class="group-title">Publications</h3>
+        <ol class="papers">
+          <li class="paper">
+            <h4 class="paper-title">
+              <a href="assets/files/Project_Policy_evaluation.pdf" target="_blank" rel="noopener">
+                Escaping Temporary Traps? Evidence from Age-Based Incentives to Permanent Employment
+              </a>
+            </h4>
+            <p class="paper-meta">
+              With <a href="https://sites.google.com/site/ferraneliasmoreno/ferran-elias/" target="_blank" rel="noopener">Ferran Elias</a> &middot;
+              <span class="venue"><em>Journal of Public Economics</em>, forthcoming</span>
+            </p>
+            <p class="paper-abstract">
+              In 1997 Spain cut non-wage labor costs on permanent contracts for workers under 30 and over 45.
+              We use the age cutoffs of this reform to estimate how targeted hiring subsidies change
+              the contracts firms offer and what this means for workers' subsequent careers.
+            </p>
+            <p class="paper-links">
+              <a href="assets/files/Project_Policy_evaluation.pdf" class="pill" target="_blank" rel="noopener">PDF</a>
+              <!-- Once the DOI is out, add:
+              <a href="https://doi.org/XX.XXXX/j.jpubeco.XXXX" class="pill" target="_blank" rel="noopener">Published version</a>
+              -->
+            </p>
+          </li>
+        </ol>
 
         <!-- Working Papers -->
-        <div class="research-block">
-          <h3 class="subsection-title">Working Papers</h3>
-          <ul class="research-list">
-            <li class="research-item">
-              <h4 class="research-title">Escaping temporary traps? Evidence from age-based incentives to permanent employment</h4>
-              <p class="research-meta">With Ferran Elias. Accepted, Journal of Public Economics</p>
-              <p class="research-abstract">
-                The paper contributes causal evidence on how targeted reductions in non-wage labor costs affect firms’ contract choices and workers’ outcomes by exploiting a Spanish reform with age-based discontinuities.
-              </p>
-              <div class="research-links">
-          <a href="assets/files/Project_Policy_evaluation.pdf"
-             class="research-link"
-             target="_blank"
-             rel="noopener">
-            Paper (PDF)
-          </a>
-        </div>
-            </li>
-            
-            <li class="research-item">
-              <h4 class="research-title">Unequal Opportunities: Worker Adjustment After a Sectoral Collapse</h4>
-              <p class="research-meta">Previously circulated as "From bricklayers to waiters: Reallocation in a deep recession"</p>
-              <p class="research-meta"></p>
-              <p class="research-abstract">
-                show that workers' ability to adjust to sectoral collapse depends critically on the match between individual skill profiles and local sectoral composition, and to introduce a reallocation index that measures this alignment as a property of the worker–market pair rather than a portable worker attribute or a uniform place characteristic
-              </p>
-              <div class="research-links">
-          <a href="assets/files/JMP.pdf"
-             class="research-link"
-             target="_blank"
-             rel="noopener">
-            Paper (PDF)
-          </a>
-        </div>
-            </li>
+        <h3 class="group-title">Working Papers</h3>
+        <ol class="papers">
+          <li class="paper">
+            <h4 class="paper-title">
+              <a href="assets/files/JMP.pdf" target="_blank" rel="noopener">
+                Unequal Opportunities: Worker Adjustment after a Sectoral Collapse
+              </a>
+            </h4>
+            <p class="paper-meta">
+              Previously circulated as &ldquo;From Bricklayers to Waiters: Reallocation in a Deep Recession&rdquo;
+            </p>
+            <p class="paper-abstract">
+              When Spanish construction collapsed in 2007&ndash;2012, some displaced workers found new jobs and others did not.
+              I build a reallocation index that measures how well each worker's prior skills match the jobs that survived
+              in their local labor market. Moving from the bottom to the top of the index reduces cumulative employment
+              losses by 34%, with no effect on reemployment wages. The gradient is mostly within provinces, so what matters
+              is the fit between a worker and a market, not the worker or the place alone.
+            </p>
+            <p class="paper-links">
+              <a href="assets/files/JMP.pdf" class="pill" target="_blank" rel="noopener">PDF</a>
+            </p>
+          </li>
 
-            <li class="research-item">
-              <h4 class="research-title">Quasi-random matches: Evidence from dual labor markets</h4>
-              <p class="research-meta">With María Castellanos and Jan Stuhler</p>
-              <p class="research-abstract">
-                The paper contributes a novel identification strategy that uses the timing of worker–firm matches to generate quasi-random variation in contract assignments, addressing non-random sorting in open-ended positions.
-              </p>
-              <div class="research-links">
-          <a href="assets/files/QRandomMatches_DualLabour_CRS.pdf"
-             class="research-link"
-             target="_blank"
-             rel="noopener">
-            Paper (PDF)
-          </a>
-        </div>
-            </li>
-          </ul>
-        </div>
+          <li class="paper">
+            <h4 class="paper-title">
+              <a href="assets/files/QRandomMatches_DualLabour_CRS.pdf" target="_blank" rel="noopener">
+                Quasi-Random Matches: Evidence from Dual Labor Markets
+              </a>
+            </h4>
+            <p class="paper-meta">With María Castellanos and <a href="https://janstuhler.com/" target="_blank" rel="noopener">Jan Stuhler</a></p>
+            <p class="paper-abstract">
+              Workers on permanent contracts differ from those on temporary ones in ways that are hard to observe.
+              We exploit the timing of when a worker's temporary contract expires, relative to how many permanent
+              contracts are being created in their province at that moment, to get quasi-random variation in who
+              lands a permanent job. We use it to estimate the causal effect of a permanent contract on workers' careers.
+            </p>
+            <p class="paper-links">
+              <a href="assets/files/QRandomMatches_DualLabour_CRS.pdf" class="pill" target="_blank" rel="noopener">PDF</a>
+            </p>
+          </li>
+        </ol>
 
         <!-- Work in Progress -->
-        <div class="research-block">
-          <h3 class="subsection-title">Work in Progress</h3>
-          <ul class="research-list">
-            <li class="research-item">
-              <h4 class="research-title">The End of the Iberian Exception: Populists and the Economy</h4>
-              <p class="research-meta">With Agustina Martinez and Luis Menendez</p>
-              <p class="research-abstract">
-                This paper examines how Spain moved away from the Iberian exception by analyzing the interaction between economic shocks and political discourse. This project combines text data with large administrative datasets from Spain.
-              </p>
-            </li>
-
-            <li class="research-item">
-              <h4 class="research-title">Internal migration and job instability</h4>
-              <p class="research-meta"></p>
-              <p class="research-abstract">
-                This paper examines how job instability shapes internal migration decisions, using Spanish provinces and longitudinal administrative data to track workers’ short- and long-term moves.
-              </p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- CV section -->
-    <section id="cv" class="section">
-      <div class="container section-inner">
-        <div class="section-header">
-          <h2 class="section-title">CV</h2>
-        </div>
-        <div class="section-content">
-          <p>
-            A full CV is available as a PDF document.
-          </p>
-          <p>
-            <a href="assets/files/CV.pdf"
-               class="button button-primary"
-               target="_blank"
-               rel="noopener">
-              Download CV (PDF)
-            </a>
-          </p>
-          <p class="cv-note">
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact section -->
-    <section id="contact" class="section section-alt">
-      <div class="container section-inner">
-        <div class="section-header">
-          <h2 class="section-title">Contact</h2>
-        </div>
-        <div class="section-content contact-content">
-          <div class="contact-block">
-            <h3 class="subsection-title">Email</h3>
-            <p>
-              <a href="mailto:henry.redondo@ua.es">henry.redondo@ua.es</a>
+        <h3 class="group-title">Work in Progress</h3>
+        <ol class="papers papers-compact">
+          <li class="paper">
+            <h4 class="paper-title">Moving without Settling: Employment Instability and the Persistence of Internal Migration</h4>
+            <p class="paper-abstract">
+              Flexible labor markets generate a lot of geographic mobility, but do the moves last? Using Spanish social
+              security records from 1995 to 2021, I compare recent movers and comparable locals after the same kind of
+              job separation to measure how job instability shortens migration spells.
             </p>
+          </li>
+
+          <li class="paper">
+            <h4 class="paper-title">Returns to Formal Sector Experience: Is It About You or Where You Worked?</h4>
+            <p class="paper-meta">
+              With <a href="https://www.jsmessina.com/" target="_blank" rel="noopener">Julián Messina</a>,
+              Santiago Reyes and
+              <a href="https://annasanzdegaldeano.com/" target="_blank" rel="noopener">Anna Sanz-de-Galdeano</a>
+            </p>
+            <p class="paper-abstract">
+              How much is a year of formal-sector experience worth? Using Brazilian matched employer&ndash;employee data (RAIS),
+              we estimate returns to experience while accounting for workers' endogenous moves across firms and jobs.
+            </p>
+          </li>
+
+          <li class="paper">
+            <h4 class="paper-title">The Power of Words: Economic Conditions, Political Discourse, and Support for Populism</h4>
+            <p class="paper-meta">
+              With <a href="https://agustinamartinezpozo.github.io/" target="_blank" rel="noopener">Agustina Martínez-Pozo</a>
+              and <a href="https://luisignaciomenendez.github.io/" target="_blank" rel="noopener">Luis Menéndez</a>
+            </p>
+            <p class="paper-abstract">
+              Do parties shape which issues citizens consider important, and does it matter electorally? We show how Vox
+              tailors what it talks about, and how, to local economic conditions, and study whether this discourse shifts
+              voters' priorities and builds into votes.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-grid">
+          <div>
+            <h3 class="contact-label">Email</h3>
+            <p><a href="mailto:henry.redondo@ua.es">henry.redondo@ua.es</a></p>
           </div>
-          <div class="contact-block">
-            <h3 class="subsection-title">Affiliation</h3>
-            <p>
+          <div>
+            <h3 class="contact-label">Address</h3>
+            <address>
               Department of Economics<br />
               University of Alicante<br />
-              Alicante, Spain
+              Campus de Sant Vicent del Raspeig<br />
+              03690 Alicante, Spain
+            </address>
+          </div>
+          <div>
+            <h3 class="contact-label">CV</h3>
+            <p><a href="assets/files/CV.pdf" target="_blank" rel="noopener">Download (PDF)</a></p>
+          </div>
+          <!-- Uncomment and fill in the profiles you use:
+          <div>
+            <h3 class="contact-label">Elsewhere</h3>
+            <p>
+              <a href="https://scholar.google.com/citations?user=XXXX" target="_blank" rel="noopener">Google Scholar</a><br />
+              <a href="https://orcid.org/XXXX-XXXX-XXXX-XXXX" target="_blank" rel="noopener">ORCID</a><br />
+              <a href="https://github.com/XXXX" target="_blank" rel="noopener">GitHub</a>
             </p>
           </div>
-          <div class="contact-block">
-            <h3 class="subsection-title"></h3>
-            <ul class="contact-links">
-
-            </ul>
-            <p class="contact-note">
-
-            </p>
-          </div>
+          -->
         </div>
       </div>
     </section>
-
-    <button class="back-to-top" aria-label="Back to top">
-      ↑
-    </button>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>&copy; <span id="year"></span> Henry Redondo · University of Alicante</p>
+    <div class="container">
+      <p>&copy; <span id="year">2026</span> Henry Redondo &middot; University of Alicante</p>
     </div>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
