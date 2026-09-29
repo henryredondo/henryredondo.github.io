@@ -1,82 +1,41 @@
-// Smooth scroll for nav links
-document.querySelectorAll('.nav-link').forEach(link => {
-  link.addEventListener('click', event => {
-    const href = link.getAttribute('href');
-    if (href && href.startsWith('#')) {
-      event.preventDefault();
-      const target = document.querySelector(href);
-      if (target) {
-        const headerOffset = 70; // approximate header height
-        const rect = target.getBoundingClientRect();
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const offsetTop = rect.top + scrollTop - headerOffset;
-
-        window.scrollTo({
-          top: offsetTop,
-          behavior: 'smooth'
-        });
-
-        const navList = document.querySelector('.nav-list');
-        navList.classList.remove('open');
-      }
-    }
-  });
-});
-
-// Active section highlighting in nav
-const sections = document.querySelectorAll('main section[id]');
-const navLinks = document.querySelectorAll('.nav-link');
-
-function onScroll() {
-  const scrollPos = window.scrollY || window.pageYOffset;
-  const headerOffset = 80;
-
-  sections.forEach(section => {
-    const rect = section.getBoundingClientRect();
-    const offsetTop = rect.top + window.pageYOffset - headerOffset;
-    const offsetBottom = offsetTop + section.offsetHeight;
-
-    if (scrollPos >= offsetTop && scrollPos < offsetBottom) {
-      const id = section.getAttribute('id');
-      navLinks.forEach(link => {
-        link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
-      });
-    }
-  });
-
-  const backToTop = document.querySelector('.back-to-top');
-  if (scrollPos > 400) {
-    backToTop.style.display = 'flex';
-  } else {
-    backToTop.style.display = 'none';
-  }
-}
-
-window.addEventListener('scroll', onScroll);
-
-// Back to top button
-const backToTopBtn = document.querySelector('.back-to-top');
-if (backToTopBtn) {
-  backToTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  });
-}
-
-// Mobile nav toggle
+// Mobile menu
 const navToggle = document.querySelector('.nav-toggle');
-const navList = document.querySelector('.nav-list');
+const navList = document.getElementById('nav-list');
+
+function setMenu(open) {
+  navList.classList.toggle('open', open);
+  navToggle.setAttribute('aria-expanded', String(open));
+  navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+}
 
 if (navToggle && navList) {
-  navToggle.addEventListener('click', () => {
-    navList.classList.toggle('open');
-  });
+  navToggle.addEventListener('click', () => setMenu(!navList.classList.contains('open')));
+  navList.addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
 }
 
-// Set current year in footer
-const yearSpan = document.getElementById('year');
-if (yearSpan) {
-  yearSpan.textContent = new Date().getFullYear();
+// Highlight the nav link of the section in view
+const navLinks = document.querySelectorAll('.nav-link');
+const sections = document.querySelectorAll('main section[id]');
+
+function setActive(id) {
+  navLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${id}`));
 }
+
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => { if (entry.isIntersecting) setActive(entry.target.id); });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  sections.forEach(section => observer.observe(section));
+
+  // The last section is short, so it may never reach mid-screen: mark it when the page bottom is reached
+  window.addEventListener('scroll', () => {
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+      setActive(sections[sections.length - 1].id);
+    }
+  }, { passive: true });
+}
+
+// Current year in footer
+const year = document.getElementById('year');
+if (year) year.textContent = new Date().getFullYear();
