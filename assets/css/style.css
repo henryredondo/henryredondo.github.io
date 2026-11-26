@@ -401,7 +401,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 0.5rem); }
   color: var(--muted);
 }
 
-.page-body { padding: 0 0 4rem; }
+.page-body { padding-bottom: 4rem; }
 
 .course-list {
   list-style: none;
