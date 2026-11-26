@@ -470,6 +470,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 0.5rem); }
 }
 
 .unit-toggle::after { content: "Show slides +"; }
+.unit-files .unit-toggle::after { content: "Show files +"; }
 .unit[open] .unit-toggle::after { content: "Hide \2212"; }
 
 .unit > summary:hover .unit-title { color: var(--accent); }
@@ -515,6 +516,7 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 0.5rem); }
 .block-name small { display: block; color: var(--muted); font-weight: 400; font-size: 0.85rem; }
 
 .block .button { padding: 0.4rem 1rem; font-size: 0.875rem; white-space: nowrap; }
+.block-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0.5rem; }
 
 @media (max-width: 760px) {
   .page-head { padding: 2.25rem 0 1rem; }
